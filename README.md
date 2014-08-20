@@ -2,7 +2,7 @@
 
 ## Blocipedia:  allows users to create public and private Markdown-based wikis
 
-https://github.com/valeriemettler/Blocitoff.git
+https://github.com/valeriemettler/Blocipedia.git
 
 Made with my mentor, Chris Beck, at Bloc (http://bloc.io).
 
