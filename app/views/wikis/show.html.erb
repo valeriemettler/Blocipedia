@@ -1,0 +1,7 @@
+<div class="row">
+  <div class="col-md-8">
+<h1><%= @wiki.title %></h1> 
+ <%= link_to "Edit", edit_wiki_path(@wiki), class: 'btn btn-success' %>
+ <p><%= @wiki.body %></p>
+
+  </div>
