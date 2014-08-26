@@ -51,6 +51,8 @@ gem 'devise'
 gem 'figaro'
 gem 'faker'
 gem 'redcarpet'
+gem 'stripe'
+gem 'friendly_id', '~> 5.0.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

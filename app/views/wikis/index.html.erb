@@ -7,6 +7,9 @@
        <h4 class="media-heading">
   <p><%= link_to wiki.title, wiki %></p>
      </h4>
+       <small>
+         created <%= time_ago_in_words(wiki.created_at) %> ago by <%= wiki.user.name %>
+       </small>
      </div>
    </div>
 <% end %>
