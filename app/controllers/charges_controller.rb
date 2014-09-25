@@ -23,7 +23,7 @@ class ChargesController < ApplicationController
    charge = Stripe::Charge.create(
      customer: customer.id, 
      amount: @amount,
-     description: 'Blocipedia Premium Membership',
+     description: 'Premium Membership',
      currency: 'usd'
    )
  

@@ -3,7 +3,12 @@ class Wiki < ActiveRecord::Base
   has_many :collaborators
   has_many :users, through: :collaborators
 
+
+
   default_scope { order('created_at DESC') }
+
+  validates :title, length: { minimum: 1 }, presence: true
+  validates :body, length: { minimum: 1 }, presence: true
 
   extend FriendlyId
   friendly_id :title, use: [:slugged, :history]
