@@ -81,5 +81,5 @@ Blocipedia::Application.configure do
 # Default Mailer Host
   Rails.application.routes.default_url_options[:host] = 'valblocipedia.herokuapp.com'
 
-  config.action_mailer.default_url_options = { host: 'valblocipedia.herokuapp.com' }
+  # config.action_mailer.default_url_options = { host: 'valblocipedia.herokuapp.com' }
 end
