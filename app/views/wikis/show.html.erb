@@ -8,7 +8,7 @@
       <%= link_to "Delete Wiki", @wiki, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this wiki?' } %> 
       <% end %>
 
-       <% if current_user.premium? %>
+       <% if current_user && current_user.premium? %>
       <%= link_to "Add/Remove Collaborators", wiki_collaborators_path(@wiki), class: 'btn btn-info' %>
       <% end %>
    <p><%= @wiki.body %></p>
