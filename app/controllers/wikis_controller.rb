@@ -1,4 +1,5 @@
 class WikisController < ApplicationController
+  
   def index
     @wikis = Wiki.all
   end
@@ -13,8 +14,7 @@ class WikisController < ApplicationController
 
   def create
      @wiki = current_user.wikis.build(wiki_params)
-     #@wiki = Wiki.new(params.require(:wiki).permit(:title, :body))
-     #@wiki = current_user.wikis.build(params.require(:wiki).permit(:title, :body))
+    
      if @wiki.save
        flash[:notice] = "Wiki was saved."
        redirect_to @wiki
@@ -26,12 +26,12 @@ class WikisController < ApplicationController
 
   def edit
     @wiki = Wiki.friendly.find(params[:id])
-    #@wiki = Wiki.find(params[:id])
+
   end
 
   def update
      @wiki = Wiki.friendly.find(params[:id])
-     #@wiki = Wiki.find(params[:id])
+
      if @wiki.update_attributes(wiki_params)
        flash[:notice] = "Wiki was updated."
        redirect_to @wiki
@@ -43,7 +43,7 @@ class WikisController < ApplicationController
 
    def destroy
      @wiki = Wiki.friendly.find(params[:id])
-     #@wiki = Wiki.find(params[:id])
+    
      title = @wiki.title
  
      if @wiki.destroy
