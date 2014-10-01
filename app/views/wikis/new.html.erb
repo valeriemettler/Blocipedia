@@ -15,7 +15,7 @@
          <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter wiki body" %>
        </div>
        <div class="form-group">
-         <% if current_user.premium? %>
+         <% if current_user.wikis.include?(@wiki) && current_user.premium? %>
          <%= f.label :private, class: 'checkbox' do %>
          <%= f.check_box(:private) %> Private wiki
          <% end %>
