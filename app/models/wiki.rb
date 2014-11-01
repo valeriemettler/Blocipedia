@@ -6,6 +6,8 @@ class Wiki < ActiveRecord::Base
 
 
   default_scope { order('created_at DESC') }
+  scope :not_private, -> { where("private IS NULL or private = ?", false) }
+  scope :visible_to, -> (user) { user && user.premium? ? all : not_private }
 
   validates :title, length: { minimum: 1 }, presence: true
   validates :body, length: { minimum: 1 }, presence: true

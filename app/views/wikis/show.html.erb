@@ -3,14 +3,14 @@
 
    <h1><%= @wiki.title %></h1> 
 
-     <% if current_user %>
+       <% if current_user %>
       <%= link_to "Edit", edit_wiki_path(@wiki), class: 'btn btn-success' %>
-      <% end %>
-      <% if current_user.wikis.include?(@wiki) %>
+       <% end %>
+      <%# if current_user.wikis.include?(@wiki) %>
       <%= link_to "Delete Wiki", @wiki, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this wiki?' } %> 
-      <% end %>
+      <%# end %>
 
-       <% if current_user.wikis.include?(@wiki) && current_user.premium? %>
+       <% if current_user && current_user.premium? %>
       <%= link_to "Add/Remove Collaborators", wiki_collaborators_path(@wiki), class: 'btn btn-info' %>
       <% end %>
    <p><%= @wiki.body %></p>
