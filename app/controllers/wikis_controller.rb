@@ -26,7 +26,6 @@ class WikisController < ApplicationController
 
   def edit
     @wiki = Wiki.friendly.find(params[:id])
-
   end
 
   def update
@@ -60,6 +59,4 @@ class WikisController < ApplicationController
    def wiki_params
     params.require(:wiki).permit(:title, :body)
    end
-
-
 end

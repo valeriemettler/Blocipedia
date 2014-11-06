@@ -3,8 +3,6 @@ class Wiki < ActiveRecord::Base
   has_many :collaborators
   has_many :users, through: :collaborators
 
-
-
   default_scope { order('created_at DESC') }
   scope :not_private, -> { where("private IS NULL or private = ?", false) }
   scope :visible_to, -> (user) { user && user.premium? ? all : not_private }
@@ -28,7 +26,5 @@ class Wiki < ActiveRecord::Base
   end
 
 end
-
-
 
 #Wiki.friendly.find(params[:id])
