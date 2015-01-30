@@ -2,13 +2,15 @@
 
 ## Blocipedia:  allows users to create public and private Markdown-based wikis
 
-https://github.com/valeriemettler/Blocipedia.git
+http://valblocipedia.herokuapp.com (demo version)
+
+https://github.com/valeriemettler/Blocipedia.git (source code)
 
 Made with my mentor, Chris Beck, at Bloc (http://bloc.io).
 
-Ruby version 2.0.0 
+Ruby version 2.0.0
 
-setup: 
+setup:
 config/application.yml
 config/application.example.yml
 
