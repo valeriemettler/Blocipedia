@@ -1,5 +1,5 @@
 require File.expand_path('../boot', __FILE__)
-config.middleware.swap(ActionDispatch::Static, Rack::Zippy::AssetServer)
+
 
 # Pick the frameworks you want:
 require "active_record/railtie"
